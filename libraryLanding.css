@@ -1,0 +1,98 @@
+:root {
+    --midnight-blue: #0D1B2A;
+    --oxford-blue: #1B263B;
+    --silver-metallic: #E0E1DD;
+    --platinum: #F8F9FA;
+    --glass-fill: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: var(--midnight-blue);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.datetime-display {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    color: var(--silver-metallic);
+    z-index: 10;
+    text-align: left;
+    border-left: 2px solid var(--silver-metallic);
+    padding-left: 15px;
+}
+
+#current-time {
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+#current-date {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    opacity: 0.8;
+}
+
+.background-container {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: -1;
+    background: url('images/landingbg.jpg') no-repeat center center/cover;
+}
+
+.frosted-overlay {
+    width: 100%; height: 100%;
+    background: rgba(13, 27, 42, 0.5); 
+    backdrop-filter: blur(15px) saturate(120%);
+}
+
+.landing-content { text-align: center; z-index: 1; width: 90%; }
+.logo-wrapper { margin-bottom: 0.5rem; }
+.main-logo { max-width: 300px; height: auto; filter: drop-shadow(0 0 15px rgba(224, 225, 221, 0.2)); }
+.subtitle { font-size: 0.9rem; font-weight: 300; letter-spacing: 5px; text-transform: uppercase; color: var(--silver-metallic); margin-bottom: 4rem; }
+
+.selection-container { display: flex; gap: 3rem; justify-content: center; flex-wrap: wrap; }
+
+.login-card {
+    background: var(--glass-fill);
+    border: 1px solid rgba(224, 225, 221, 0.15);
+    padding: 3.5rem 2rem;
+    border-radius: 24px;
+    width: 350px; /* Slightly wider landing cards too */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+.login-card:hover { transform: translateY(-12px); background: rgba(255, 255, 255, 0.18); border-color: var(--silver-metallic); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); }
+
+.icon-circle {
+    background: linear-gradient(135deg, #415A77, #1B263B);
+    width: 65px; height: 65px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 2rem; font-size: 1.5rem; color: var(--silver-metallic);
+}
+
+.card-title { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--platinum); margin-bottom: 1rem; }
+.card-text { font-size: 0.95rem; color: var(--silver-metallic); margin-bottom: 2.5rem; font-weight: 300; line-height: 1.6; }
+
+button { font-family: 'Montserrat', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.8rem; padding: 1rem; border-radius: 10px; cursor: pointer; width: 100%; transition: 0.3s ease; }
+.btn-primary { background-color: var(--silver-metallic); color: var(--midnight-blue); border: none; }
+.btn-outline { background: transparent; border: 2px solid var(--silver-metallic); color: var(--silver-metallic); }
+.btn-primary:hover { background-color: white; box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); }
+.btn-outline:hover { background: var(--silver-metallic); color: var(--midnight-blue); }

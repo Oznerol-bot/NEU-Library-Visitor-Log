@@ -1,0 +1,308 @@
+/* adminMain.css */
+
+:root {
+    --midnight: #0D1B2A;
+    --silver: #E0E1DD;
+    --platinum: #F8F9FA;
+    --glass: rgba(255, 255, 255, 0.03);
+    --border: rgba(255, 255, 255, 0.1);
+    --sidebar-w: 280px;
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body {
+    background-color: var(--midnight);
+    color: var(--platinum);
+    font-family: 'Montserrat', sans-serif;
+    display: flex; 
+    height: 100vh; 
+    overflow: hidden;
+}
+
+/* Background Elements */
+.background-container { 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    z-index: -1; 
+    background: url('../images/landingbg.jpg') center/cover; 
+}
+
+.frosted-overlay { 
+    width: 100%; 
+    height: 100%; 
+    background: radial-gradient(circle, rgba(13,27,42,0.85), rgba(5,10,16,0.95)); 
+    backdrop-filter: blur(20px); 
+}
+
+/* Sidebar Navigation */
+.sidebar { 
+    width: var(--sidebar-w); 
+    background: rgba(0,0,0,0.3); 
+    border-right: 1px solid var(--border); 
+    padding: 40px 25px; 
+    display: flex; 
+    flex-direction: column; 
+    position: fixed;
+    height: 100vh;
+}
+
+.sidebar-logo img { 
+    width: 130px; 
+    margin-bottom: 50px; 
+}
+
+.nav-links { 
+    list-style: none; 
+    flex-grow: 1; 
+}
+
+.nav-links a { 
+    color: var(--silver); 
+    text-decoration: none; 
+    display: block; 
+    padding: 15px; 
+    border-radius: 8px; 
+    font-size: 0.8rem; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    transition: 0.3s; 
+}
+
+.nav-links li.active a, .nav-links a:hover { 
+    background: var(--glass); 
+    color: white; 
+    box-shadow: inset 4px 0 0 var(--silver); 
+}
+
+/* Main Content Layout */
+.main-wrapper { 
+    flex: 1; 
+    margin-left: var(--sidebar-w); /* Prevents content from going under sidebar */
+    overflow-y: auto; 
+    padding: 50px; 
+}
+
+.dashboard-container { 
+    max-width: 1100px; 
+    margin: 0 auto; 
+}
+
+.welcome-msg { 
+    font-family: 'Playfair Display'; 
+    font-size: 2.5rem; 
+    margin-bottom: 30px; 
+}
+
+/* Stats Cards (Top Grid) */
+.stats-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 25px; 
+}
+
+.stats-card { 
+    background: var(--glass); 
+    border: 1px solid var(--border); 
+    padding: 30px; 
+    border-radius: 15px; 
+    display: flex; 
+    align-items: center; 
+    gap: 20px; 
+    transition: 0.3s; 
+}
+
+.stats-card:hover { 
+    transform: translateY(-5px); 
+    border-color: var(--silver); 
+}
+
+.stats-card.highlight { 
+    background: rgba(224, 225, 221, 0.05); 
+}
+
+.card-icon { 
+    font-size: 1.8rem; 
+    opacity: 0.7; 
+}
+
+.stats-label { 
+    font-size: 0.7rem; 
+    text-transform: uppercase; 
+    color: var(--silver); 
+}
+
+.stats-value { 
+    font-size: 3rem; 
+    font-weight: 300; 
+}
+
+/* Filter Section Styling */
+.filter-section { 
+    background: var(--glass); 
+    padding: 30px; 
+    border-radius: 12px; 
+    border: 1px solid var(--border); 
+    margin: 40px 0; 
+}
+
+.filter-header { 
+    display: flex; 
+    justify-content: space-between; 
+    margin-bottom: 20px; 
+    border-bottom: 1px solid var(--border); 
+    padding-bottom: 10px; 
+}
+
+.btn-reset { 
+    background: none; 
+    border: none; 
+    color: var(--silver); 
+    cursor: pointer; 
+    font-size: 0.7rem; 
+    text-decoration: underline; 
+}
+
+.filter-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
+    gap: 20px; 
+}
+
+.filter-item label { 
+    font-size: 0.65rem; 
+    color: var(--silver); 
+    text-transform: uppercase; 
+    display: block; 
+    margin-bottom: 8px; 
+}
+
+.filter-item select, .filter-item input { 
+    width: 100%; 
+    background: rgba(0,0,0,0.2); 
+    border: 1px solid var(--border); 
+    color: white; 
+    padding: 10px; 
+    border-radius: 5px; 
+    outline: none; 
+}
+
+.btn-apply-filter { 
+    width: 100%; 
+    margin-top: 25px; 
+    background: var(--silver); 
+    color: var(--midnight); 
+    border: none; 
+    padding: 15px; 
+    font-weight: 600; 
+    text-transform: uppercase; 
+    cursor: pointer; 
+    border-radius: 6px; 
+    transition: 0.3s; 
+}
+
+.btn-apply-filter:hover { 
+    background: white; 
+    transform: translateY(-2px); 
+    box-shadow: 0 5px 15px rgba(224,225,221,0.3); 
+}
+
+/* Results Visualization Layout */
+.results-container { 
+    margin-top: 50px; 
+    padding: 30px; 
+    background: rgba(255, 255, 255, 0.02); 
+    border-top: 1px dashed var(--border); 
+    border-radius: 12px; 
+    animation: fadeInUp 0.5s ease; 
+}
+
+.results-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Card on left, Chart on right */
+    gap: 30px;
+    margin-top: 20px;
+    align-items: start;
+}
+
+.chart-wrapper {
+    background: var(--glass);
+    border: 1px solid var(--border);
+    padding: 20px;
+    border-radius: 15px;
+    height: 350px;
+}
+
+.result-card { 
+    border: 1px solid var(--silver) !important; 
+    background: rgba(224, 225, 221, 0.1) !important; 
+}
+
+@keyframes fadeInUp { 
+    from { opacity: 0; transform: translateY(20px); } 
+    to { opacity: 1; transform: translateY(0); } 
+}
+
+/* Action Buttons & Footer */
+.export-container { 
+    margin-top: 30px; 
+}
+
+.action-footer { 
+    margin-top: 40px; 
+}
+
+.action-btn { 
+    padding: 15px 30px; 
+    border-radius: 6px; 
+    cursor: pointer; 
+    text-transform: uppercase; 
+    font-size: 0.8rem; 
+    font-weight: 600; 
+    transition: 0.3s; 
+}
+
+.action-btn.primary { 
+    background: var(--silver); 
+    color: var(--midnight); 
+    border: none; 
+}
+
+.action-btn.outline { 
+    background: transparent; 
+    border: 1px solid var(--silver); 
+    color: var(--silver); 
+}
+
+.action-btn:hover { 
+    opacity: 0.9; 
+    transform: scale(1.02); 
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1000px) {
+    .results-layout { 
+        grid-template-columns: 1fr; 
+    }
+    
+    .sidebar {
+        width: 80px;
+        padding: 20px 10px;
+    }
+    
+    .sidebar-logo img { width: 50px; }
+    
+    .nav-links a span { display: none; } /* Hide text if you add spans later */
+    
+    .main-wrapper {
+        margin-left: 80px;
+        padding: 20px;
+    }
+}

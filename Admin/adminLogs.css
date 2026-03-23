@@ -1,0 +1,131 @@
+/* adminLogs.css */
+
+.blocked-section {
+    margin-bottom: 40px;
+}
+
+.blocked-card {
+    background: rgba(255, 69, 58, 0.05) !important;
+    border: 1px solid rgba(255, 69, 58, 0.2) !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 25px;
+}
+
+.blocked-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.blocked-tag {
+    background: rgba(255, 69, 58, 0.15);
+    border: 1px solid rgba(255, 69, 58, 0.3);
+    color: #ff6b6b;
+    padding: 8px 15px;
+    border-radius: 25px;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    animation: fadeIn 0.3s ease;
+}
+
+/* The 'X' Button inside the tag */
+.tag-unblock-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #ff6b6b;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: 0.2s;
+}
+
+.tag-unblock-btn:hover {
+    background: #ff453a;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Table Styling */
+.table-wrapper {
+    background: var(--glass);
+    border-radius: 15px;
+    border: 1px solid var(--border);
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    padding: 20px;
+    background: rgba(255,255,255,0.03);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--silver);
+    border-bottom: 1px solid var(--border);
+}
+
+td {
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.85rem;
+}
+
+.btn-block {
+    background: #ff453a;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.75rem;
+}
+
+.btn-unblock {
+    background: #32d74b;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.75rem;
+}
+
+.table-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logSearch {
+    background: rgba(0,0,0,0.2);
+    border: 1px solid var(--border);
+    padding: 10px 15px;
+    color: white;
+    border-radius: 8px;
+    width: 280px;
+}
+
+.empty-msg {
+    font-style: italic;
+    opacity: 0.5;
+    font-size: 0.85rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}

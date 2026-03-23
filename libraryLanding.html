@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEU Library | Visitor Log</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="libraryLanding.css">
+</head>
+<body>
+    <div id="datetime-container" class="datetime-display">
+        <div id="current-time">00:00:00</div>
+        <div id="current-date">Loading date...</div>
+    </div>
+
+    <div class="background-container">
+        <div class="frosted-overlay"></div>
+    </div>
+
+    <main class="landing-content">
+        <header class="hero-section">
+            <div class="logo-wrapper">
+                <img src="images/neuliblogo.png" alt="NEU Library Logo" class="main-logo">
+            </div>
+            <p class="subtitle">NEU LIBRARY VISITOR LOG</p>
+        </header>
+
+        <div class="selection-container">
+            <div class="login-card" onclick="navigateTo('visitor')">
+                <div class="icon-circle">👤</div>
+                <h2 class="card-title">Visitor</h2>
+                <p class="card-text">Quickly register your library entry or exit.</p>
+                <button class="btn-primary">Continue</button>
+            </div>
+
+            <div class="login-card" onclick="navigateTo('admin')">
+                <div class="icon-circle">🔒</div>
+                <h2 class="card-title">Administrator</h2>
+                <p class="card-text">Secure access for library staff and management.</p>
+                <button class="btn-outline">Login</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>

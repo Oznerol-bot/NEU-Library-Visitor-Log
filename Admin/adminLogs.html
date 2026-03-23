@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitor Logs | NEU Library</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="adminMain.css">
+    <link rel="stylesheet" href="adminLogs.css">
+</head>
+<body>
+    <div class="background-container"><div class="frosted-overlay"></div></div>
+
+    <nav class="sidebar">
+        <div class="sidebar-logo"><img src="../images/neuliblogo.png" alt="NEU Logo"></div>
+        <ul class="nav-links">
+            <li><a href="adminMain.html">Dashboard</a></li>
+            <li class="active"><a href="adminLogs.html">Visitor Logs</a></li>
+            <li><a href="#" id="logout-btn">Logout</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-wrapper">
+        <main class="dashboard-container">
+            <header class="dashboard-header">
+                <h1 class="welcome-msg">Attendance Logs</h1>
+            </header>
+
+            <section class="blocked-section">
+                <div class="card blocked-card">
+                    <div class="card-header">
+                        <h3>🚫 Blocked Access List</h3>
+                        <p class="label">Users below are currently restricted from entering the library</p>
+                    </div>
+                    <div id="blocked-list-container" class="blocked-tags">
+                        <p class="empty-msg">No users currently blocked.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="log-table-container">
+                <div class="table-controls">
+                    <h3>Visitor Entry History</h3>
+                    <div class="search-wrapper">
+                        <input type="text" id="logSearch" placeholder="Search by name or email..." onkeyup="filterLogs()">
+                    </div>
+                </div>
+                <div class="table-wrapper">
+                    <table id="visitorTable">
+                        <thead>
+                            <tr>
+                                <th>Timestamp</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>College</th>
+                                <th>Reason</th>
+                                <th>Access Control</th>
+                            </tr>
+                        </thead>
+                        <tbody id="logTableBody">
+                            </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script type="module" src="adminLogs.js"></script>
+</body>
+</html>

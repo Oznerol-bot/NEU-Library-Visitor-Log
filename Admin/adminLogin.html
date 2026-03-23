@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login | NEU Library</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="adminLogin.css">
+</head>
+<body>
+    <header class="logo-header">
+        <img src="../images/neuliblogolarge.png" alt="NEU Library Logo" class="centered-logo">
+    </header>
+
+    <div class="background-container">
+        <div class="frosted-overlay"></div>
+    </div>
+
+    <main class="login-content">
+        <div class="sharp-card">
+            <h1 class="portal-title">Admin Portal</h1>
+            <p class="portal-subtitle">Management Access Only</p>
+
+            <form id="admin-login-form" class="login-form">
+                <div class="input-group">
+                    <label for="admin-email">Admin Email</label>
+                    <input type="email" id="admin-email" placeholder="username@gmail.com" required>
+                </div>
+
+                <div id="error-message" class="error-text"></div>
+
+                <button type="submit" class="btn-login">Next</button>
+            </form>
+
+            <div class="divider">
+                <span>OR</span>
+            </div>
+
+            <button class="btn-google" id="google-login-btn">
+                <img src="https://fonts.gstatic.com/s/i/productlogos/googleg/v6/24px.svg" alt="Google Logo">
+                Continue with Google
+            </button>
+            
+            <a href="../libraryLanding.html" class="back-link">Return to Home</a>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-clock">
+            <span id="current-date">Loading date...</span>
+            <span class="dot-separator">•</span>
+            <span id="current-time">00:00:00</span>
+        </div>
+    </footer>
+
+    <script src="../main.js"></script>
+    <script type="module" src="adminLogin.js"></script>
+</body>
+</html>

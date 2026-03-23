@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entry Confirmed | NEU Library</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="visitorEntry.css">
+</head>
+<body>
+    <header class="logo-header">
+        <img src="../images/neuliblogolarge.png" alt="NEU Library Logo" class="centered-logo">
+    </header>
+
+    <div class="background-container">
+        <div class="frosted-overlay"></div>
+    </div>
+
+    <main class="entry-content">
+        <div class="status-icon-wrapper">
+            <div class="check-icon">✓</div>
+        </div>
+
+        <h1 class="welcome-text">Welcome to NEU Library!</h1>
+        <h2 id="visitor-name" class="visitor-display">Visitor Name</h2>
+
+        <div class="info-summary">
+            <div class="info-item">
+                <span class="label">College / Dept</span>
+                <span id="display-college" class="value">---</span>
+            </div>
+            <div class="info-item">
+                <span class="label">Reason for Entry</span>
+                <span id="display-reason" class="value">---</span>
+            </div>
+            <div class="info-item">
+                <span class="label">Visit Time</span>
+                <span id="display-time" class="value">00:00 AM</span>
+            </div>
+        </div>
+
+        <p class="instruction-text">Your entry has been recorded. Please enjoy your stay.</p>
+        
+        <button onclick="finishEntry()" class="btn-finish">Confirm & Exit</button>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-clock">
+            <span id="current-date">Loading date...</span>
+            <span class="dot-separator">•</span>
+            <span id="current-time">00:00:00</span>
+        </div>
+    </footer>
+
+    <script src="../main.js"></script>
+    <script src="visitorEntry.js"></script>
+</body>
+</html>

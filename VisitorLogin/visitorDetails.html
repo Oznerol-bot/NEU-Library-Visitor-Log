@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Details | NEU Library</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="visitorDetails.css">
+</head>
+<body>
+    <div id="datetime-container" class="datetime-display">
+        <div id="current-time">00:00:00</div>
+        <div id="current-date">Loading date...</div>
+    </div>
+
+    <div class="background-container">
+        <div class="frosted-overlay"></div>
+    </div>
+
+    <header class="page-header">
+        <div class="logo-wrapper">
+            <img src="../images/neuliblogo.png" alt="NEU Library Logo" class="header-logo">
+        </div>
+    </header>
+
+    <main class="details-content">
+        <div class="details-card">
+            <h2 class="section-title">Visit Details</h2>
+            
+            <div class="selection-group">
+                <p class="group-label">I am a...</p>
+                <div class="card-grid small">
+                    <div class="selection-card" data-type="visitorType" data-value="Student">Student</div>
+                    <div class="selection-card" data-type="visitorType" data-value="Faculty">Faculty</div>
+                    <div class="selection-card" data-type="visitorType" data-value="Staff">Staff</div>
+                </div>
+            </div>
+
+            <div class="selection-group">
+                <p class="group-label">College / Department</p>
+                <div class="scroll-container">
+                    <div class="card-grid wide">
+                        <div class="selection-card" data-type="college" data-value="College of Accountancy">College of Accountancy</div>
+                        <div class="selection-card" data-type="college" data-value="College of Agriculture">College of Agriculture</div>
+                        <div class="selection-card" data-type="college" data-value="College of Arts and Sciences">College of Arts and Sciences</div>
+                        <div class="selection-card" data-type="college" data-value="College of Business Administration">College of Business Administration</div>
+                        <div class="selection-card" data-type="college" data-value="College of Communication">College of Communication</div>
+                        <div class="selection-card" data-type="college" data-value="College of Informatics and Computing Studies">College of Informatics and Computing Studies</div>
+                        <div class="selection-card" data-type="college" data-value="College of Criminology">College of Criminology</div>
+                        <div class="selection-card" data-type="college" data-value="College of Education">College of Education</div>
+                        <div class="selection-card" data-type="college" data-value="College of Engineering and Architecture">College of Engineering and Architecture</div>
+                        <div class="selection-card" data-type="college" data-value="College of Medical Technology">College of Medical Technology</div>
+                        <div class="selection-card" data-type="college" data-value="College of Midwifery">College of Midwifery</div>
+                        <div class="selection-card" data-type="college" data-value="College of Music">College of Music</div>
+                        <div class="selection-card" data-type="college" data-value="College of Nursing">College of Nursing</div>
+                        <div class="selection-card" data-type="college" data-value="College of Physical Therapy">College of Physical Therapy</div>
+                        <div class="selection-card" data-type="college" data-value="College of Respiratory Therapy">College of Respiratory Therapy</div>
+                        <div class="selection-card" data-type="college" data-value="School of International Relations">School of International Relations</div>
+                        <div class="selection-card" data-type="college" data-value="University Employee">University Employee</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="selection-group">
+                <p class="group-label">Reason for Visit</p>
+                <div class="card-grid">
+                    <div class="selection-card" data-type="reason" data-value="Reading">Reading</div>
+                    <div class="selection-card" data-type="reason" data-value="Studying">Studying</div>
+                    <div class="selection-card" data-type="reason" data-value="Research">Research</div>
+                    <div class="selection-card" data-type="reason" data-value="Computer">Use of Computer</div>
+                    <div class="selection-card" data-type="reason" data-value="Lounge">Student Lounge</div>
+                    <div class="selection-card" data-type="reason" data-value="Meeting">Meeting</div>
+                </div>
+            </div>
+
+            <button id="submit-details" class="btn-primary" disabled>Complete Registration</button>
+        </div>
+    </main>
+
+    <script src="../main.js"></script>
+    <script type="module" src="visitorDetails.js"></script>
+</body>
+</html>

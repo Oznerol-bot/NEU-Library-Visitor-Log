@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | NEU Library</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <link rel="stylesheet" href="adminMain.css">
+</head>
+<body>
+    <div class="background-container"><div class="frosted-overlay"></div></div>
+
+    <nav class="sidebar">
+        <div class="sidebar-logo"><img src="../images/neuliblogo.png" alt="NEU Logo"></div>
+        <ul class="nav-links">
+            <li class="active"><a href="adminMain.html">Dashboard</a></li>
+            <li><a href="adminLogs.html">Visitor Logs</a></li>
+           <li><a href="#" id="logout-btn">Logout</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-wrapper">
+        <main class="dashboard-container">
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <h1 class="welcome-msg">Library Analytics</h1>
+                    <p class="admin-identity">Logged in as: <span id="admin-display-email">admin@gmail.com</span></p>
+                </div>
+            </header>
+
+            <section class="stats-grid">
+                <div class="stats-card global">
+                    <div class="card-icon">👤</div>
+                    <div class="card-info">
+                        <p class="stats-label">Daily Visitors</p>
+                        <h2 class="stats-value" id="global-today">0</h2>
+                    </div>
+                </div>
+                <div class="stats-card global">
+                    <div class="card-icon">📅</div>
+                    <div class="card-info">
+                        <p class="stats-label">Weekly Total</p>
+                        <h2 class="stats-value" id="global-week">0</h2>
+                    </div>
+                </div>
+                <div class="stats-card global highlight">
+                    <div class="card-icon">📈</div>
+                    <div class="card-info">
+                        <p class="stats-label">Grand Total</p>
+                        <h2 class="stats-value" id="global-total">0</h2>
+                    </div>
+                </div>
+            </section>
+
+            <section class="filter-section">
+                <div class="filter-header">
+                    <h3>Filter & Search Data</h3>
+                    <button class="btn-reset" onclick="resetFilters()">Clear Filters</button>
+                </div>
+                <div class="filter-grid">
+                    <div class="filter-item">
+                        <label>College / Dept</label>
+                        <select id="filter-college">
+                            <option value="all">All Departments</option>
+                            <option value="Accountancy">College of Accountancy</option>
+                            <option value="Agriculture">College of Agriculture</option>
+                            <option value="Arts and Sciences">College of Arts and Sciences</option>
+                            <option value="Business Administration">College of Business Administration</option>
+                            <option value="Communication">College of Communication</option>
+                            <option value="CICS">CICS</option>
+                            <option value="Criminology">College of Criminology</option>
+                            <option value="Education">College of Education</option>
+                            <option value="Engineering and Architecture">Engineering & Architecture</option>
+                            <option value="Medical Technology">Medical Technology</option>
+                            <option value="Nursing">College of Nursing</option>
+                            <option value="University Employee">University Employee</option>
+                        </select>
+                    </div>
+                    <div class="filter-item">
+                        <label>Reason</label>
+                        <select id="filter-reason">
+                            <option value="all">All Activities</option>
+                            <option value="Reading">Reading</option>
+                            <option value="Studying">Studying</option>
+                            <option value="Research">Research</option>
+                            <option value="Computer">Use of Computer</option>
+                            <option value="Lounge">Student Lounge</option>
+                        </select>
+                    </div>
+                    <div class="filter-item">
+                        <label>Visitor Type</label>
+                        <select id="filter-type">
+                            <option value="all">All Types</option>
+                            <option value="Student">Student</option>
+                            <option value="Faculty">Faculty</option>
+                            <option value="Staff">Staff</option>
+                        </select>
+                    </div>
+                    <div class="filter-item">
+                        <label>Date From</label>
+                        <input type="date" id="filter-date-start">
+                    </div>
+                    <div class="filter-item">
+                        <label>Date To</label>
+                        <input type="date" id="filter-date-end">
+                    </div>
+                </div>
+                <button class="btn-apply-filter" onclick="applyFilters()">Apply Filter</button>
+            </section>
+
+            <section id="results-area" class="results-container" style="display: none;">
+                <div class="results-header">
+                    <h3>Filter Output & Visualization</h3>
+                </div>
+                <div class="results-layout">
+                    <div class="stats-card result-card">
+                        <div class="card-icon">🔍</div>
+                        <div class="card-info">
+                            <p class="stats-label">Records Found</p>
+                            <h2 class="stats-value" id="filter-match-count">0</h2>
+                        </div>
+                    </div>
+                    <div class="chart-wrapper">
+                        <canvas id="resultsChart"></canvas>
+                    </div>
+                </div>
+                <div class="export-container">
+                    <button class="action-btn outline" onclick="exportFilteredData()">Export Results to PDF</button>
+                </div>
+            </section>
+
+            <footer class="action-footer">
+                <button class="action-btn primary" onclick="window.location.href='adminLogs.html'">View Detailed Logs</button>
+            </footer>
+        </main>
+    </div>
+
+    <script type="module" src="adminMain.js"></script>
+</body>
+</html>

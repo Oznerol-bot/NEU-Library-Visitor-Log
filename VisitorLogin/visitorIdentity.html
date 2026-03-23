@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identify Visitor | NEU Library</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="visitorIdentity.css">
+</head>
+<body>
+    <div id="datetime-container" class="datetime-display">
+        <div id="current-time">00:00:00</div>
+        <div id="current-date">Loading date...</div>
+    </div>
+
+    <div class="background-container">
+        <div class="frosted-overlay"></div>
+    </div>
+
+    <main class="identity-content">
+        <div id="registration-card" class="identity-card hidden">
+            <div class="logo-wrapper">
+                <img src="../images/neuliblogo.png" alt="NEU Library Logo" class="card-logo">
+            </div>
+            
+            <h2 class="card-title">Welcome, New Visitor!</h2>
+            <p class="card-subtitle">It looks like this is your first time. Please tell us your name to create your profile.</p>
+
+            <form id="identity-form" class="auth-form">
+                <div class="input-group">
+                    <label for="visitor-name">Full Name</label>
+                    <input type="text" id="visitor-name" placeholder="Enter your full name" required>
+                </div>
+                
+                <button type="submit" class="btn-primary">Create Profile & Continue</button>
+            </form>
+        </div>
+
+        <div id="loading-state" class="loading-container">
+            <div class="spinner"></div>
+            <p>Checking visitor records...</p>
+        </div>
+    </main>
+
+    <script src="../main.js"></script>
+    <script type="module" src="visitorIdentity.js"></script>
+</body>
+</html>

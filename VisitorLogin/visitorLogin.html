@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitor Login | NEU Library</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="visitorLogin.css">
+</head>
+<body>
+    <div id="datetime-container" class="datetime-display">
+        <div id="current-time">00:00:00</div>
+        <div id="current-date">Loading date...</div>
+    </div>
+
+    <div class="background-container">
+        <div class="frosted-overlay"></div>
+    </div>
+
+    <main class="login-content">
+        <div class="back-btn-container">
+            <button class="btn-back" onclick="window.location.href='../libraryLanding.html'">
+                <span class="arrow">←</span> Back to Home
+            </button>
+        </div>
+
+        <div class="login-card">
+            <div class="logo-wrapper">
+                <img src="../images/neuliblogo.png" alt="NEU Library Logo" class="card-logo">
+            </div>
+            
+            <h2 class="card-title">Visitor Login</h2>
+            <p class="card-subtitle">Please use your institutional email to proceed</p>
+
+            <form id="visitor-form" class="auth-form">
+                <div class="input-group">
+                    <input type="email" id="email-input" placeholder="example@neu.edu.ph" required>
+                </div>
+                
+                <button type="submit" class="btn-primary">Continue with Email</button>
+            </form>
+
+            <div class="divider">
+                <span>OR</span>
+            </div>
+
+            <button class="btn-google" onclick="handleGoogleLogin()">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google Logo">
+                Sign in with Google
+            </button>
+            
+            <p id="error-message" class="error-text"></p>
+        </div>
+    </main>
+
+    <script src="../main.js"></script>
+    <script type="module" src="visitorLogin.js"></script>
+</body>
+</html>
