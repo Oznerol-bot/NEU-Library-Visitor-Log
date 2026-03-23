@@ -31,5 +31,5 @@ function finishEntry() {
     localStorage.removeItem('lastVisitorTime');
 
     // Redirect to the main library portal
-    window.location.href = '../libraryLanding.html';
+    window.location.href = '../index.html';
 }

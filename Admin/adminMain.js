@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
             try {
                 await signOut(auth);
                 localStorage.removeItem('adminEmail');
-                window.location.href = '../libraryLanding.html'; 
+                window.location.href = '../index.html'; 
             } catch (error) {
                 console.error("Logout Error:", error);
             }
