@@ -1,60 +1,90 @@
-NEU Library Visitor Log 📚
+# NEU Library Visitor Log 📚
 
-A comprehensive web-based visitor management designed for the New Era University (NEU) Library. This application streamlines the check-in process for students and faculty while providing administrators with real-time analytics and reporting tools.
+A comprehensive web-based visitor management system designed for the **New Era University (NEU)** Library. This application streamlines the check-in process for students and faculty while providing administrators with real-time analytics and reporting tools.
+<br>
 
-DEPLOYED PROJECT LINK: [(https://neu-library-visitor-log-khaki.vercel.app/)](https://neu-library-visitor-log-khaki.vercel.app/)
+**🚀 DEPLOYED PROJECT LINK:** [(https://neu-library-visitor-log-khaki.vercel.app/)](https://neu-library-visitor-log-khaki.vercel.app/)
 
-✨ Features
+---
 
-👤 Visitor Side
-Institutional Login: Secure authentication using Google OAuth, restricted to @neu.edu.ph domains.
+## ✨ Features
+<br>
 
-Dynamic Profile Setup: Visitors can save their details (Name, College, Course, Year Level) for faster future check-ins.
+### 👤 Visitor Side
+* **Institutional Login:** Secure authentication using Google OAuth, restricted to `@neu.edu.ph` domains.
+<br>
 
-Simplified Check-in: A one-click log entry system with categorized reasons for visiting (Study, Research, Borrowing, etc.).
+* **Dynamic Profile Setup:** Visitors can save their details (Name, College, Course, Year Level) for faster future check-ins.
+<br>
 
+* **Simplified Check-in:** A one-click log entry system with categorized reasons for visiting (Study, Research, Borrowing, etc.).
 
-🛡️Admin Dashboard
-Secure Admin Login: Multi-layer security check against a Firestoreregistry.
+---
 
-Real-time Analytics: * Daily, Weekly, and Total visitor counters that update instantly without refreshing.
+### 🛡️ Admin Dashboard
+* **Secure Admin Login:** Multi-layer security check against a Firestore registry.
+<br>
 
-Dynamic Charting: Visual breakdown of visitors by College using Chart.js.
+* **Real-time Analytics:** Daily, Weekly, and Total visitor counters that update instantly without refreshing.
+<br>
 
-Advanced Filtering: Flexible search system allowing admins to filter logs by College, Reason, Visitor Type, Year, or Course.
+* **Dynamic Charting:** Visual breakdown of visitors by College using **Chart.js**.
+<br>
 
-Reporting: Export filtered data directly to PDF for official library documentation.
+* **Advanced Filtering:** Flexible search system allowing admins to filter logs by College, Reason, Visitor Type, Year, or Course.
+<br>
 
+* **Reporting:** Export filtered data directly to **PDF** for official library documentation.
 
-🛠️ Tech Stack
-Frontend: HTML5, CSS3 (Modern UI), JavaScript (ES6+)
+---
 
-Backend/Database: Firebase Firestore (NoSQL)
+## 🛠️ Tech Stack
+* **Frontend:** HTML5, CSS3 (Modern UI), JavaScript (ES6+)
+<br>
 
-Authentication: Firebase Auth (Google Provider)
+* **Backend/Database:** Firebase Firestore (NoSQL)
+<br>
 
-Deployment: Vercel
+* **Authentication:** Firebase Auth (Google Provider)
+<br>
 
+* **Deployment:** Vercel
 
-🔒 Security Configuration
+---
 
-The system is protected by Firestore Security Rules to ensure:
+## 🔒 Security Configuration
+The system is protected by **Firestore Security Rules** to ensure:
+<br>
 
-Visitors can only create logs and read/update their own profiles.
+1. Visitors can only create logs and read/update their own profiles.
+<br>
 
-Administrative data (Full Logs, Admin Registry) is only accessible to verified accounts in the admin collection.
+2. Administrative data (Full Logs, Admin Registry) is only accessible to verified accounts in the admin collection.
 
+---
 
+## 📖 How to Use
+### Visitors:
+1. Scan the QR code or visit the URL.
+<br>
 
-📖 How to Use
-Visitors: * Scan the QR code or visit the URL.
+2. Sign in with your **NEU Google account**.
+<br>
 
-Sign in with your NEU Google account.
+3. Fill in your details (first time only) and click **Log Visit**.
 
-Fill in your details (first time only) and click Log Visit.
+<br>
 
-Admins: * Navigate to the Admin Login.
+### Admins:
+1. Navigate to the **Admin Login**.
+<br>
 
-View real-time statistics on the dashboard.
+2. View real-time statistics on the dashboard.
+<br>
 
-Use the filter controls to generate specific reports and click Export to PDF.
+3. Use the filter controls to generate specific reports and click **Export to PDF**.
+
+<br>
+
+---
+**Developed for New Era University - College of Informatics and Computing Studies**
